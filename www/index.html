@@ -13,15 +13,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Square+Peg&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet" />
 </head>
-  <body>
-    Login: <br>
-    <input type="text" name="login" id="login"><br>
-    
-    Senha: <br>
-    <input type="password" name="senha" id="senha"><br>
-    
-    <button id="entrar">Entrar</button>
-
+<body id="body-login">
+    <main id="mainLogin">
+        <section class="area-login">
+            <div class="login"> <!-- Principal -->
+            <div class="logo">
+            <img src="logo/logoazul.png" alt="Logo do projeto">
+            </div>
+            <form id="entrar" method="post" autocomplete="off">
+                Usuário:
+                <input class="inputmain" type= "email" id="login" name="login" placeholder="Login">
+                <BR>
+                Senha:
+                <input class="inputmain" type="password" id="senha" name="senha" placeholder="Senha">
+                <br>
+                <button type="submit"> Entrar</button>
+            </form>
+            <p><a href="#">Esqueceu a senha?</a></p>
+            </div>
+        </section>
+    </main>
   <script>
     let form = document.getElementById("entrar");
     let login = document.getElementById("login");
