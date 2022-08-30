@@ -11,7 +11,7 @@ body {
 }
 
 body#body-login {
-    background-color: #759BE0;
+    background-color: #181818;
     font-family: 'Work Sans', sans-serif;
     overflow: hidden;
 }
@@ -26,27 +26,27 @@ body#body-login {
 }
 
 .login {
-    background-color: #7961AA;
+    background-color: #2b2b2b;
     display: flex;
     border-radius: 10px;
     flex-direction: column;
     align-items: center;
     width: 280px;
-    height: 320px;
+    height: 310px;
     padding: 35px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.342);
 }
 
-.login form {
+.form {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
 .login input {
-    margin-top: 10px;
-    background-color: #42345e;
-    color: rgb(202, 202, 202);
+    margin-top: 15px;
+    background-color: #999999;
+    color: rgb(24, 24, 24);
     padding-left: 15px;
     border: none;
     height: 45px;
@@ -58,17 +58,28 @@ body#body-login {
     transition: 0.2s;
 }
 
+.inputmain::placeholder {
+    transition: 0.2s;
+}
+
 .inputmain:focus {
     background-color: #5f4b88;
+    color: rgb(219, 219, 219);
 }
 
 input::placeholder {
-    color: rgb(126, 126, 126);
+    color: rgb(41, 41, 41);
 }
 
-form [type="submit"]{
+#entrar{
     display: block;
-    background-color: #4fb677;
+    margin-top: 20px;
+    height: 40px;
+    width: 295px;
+    border-radius: 5px;
+    color: rgb(202, 202, 202);
+    border: none;
+    background-color: #5f4b88;
     font-size: 18px;
     text-transform: uppercase;
     font-weight: bold;
@@ -76,16 +87,17 @@ form [type="submit"]{
     transition: 0.2s;
 }
 
-form [type="submit"]:hover {
+#entrar:hover {
     background-color: #58ca84;
 }
 
-form [type="submit"]:active {
+#entrar:active {
     background-color: #a4ffc7;
 }
 
 .logo img {
     height: 80px;
+    margin: 5px;
 }
 
 .login p {
@@ -98,10 +110,15 @@ form [type="submit"]:active {
 
 }
 
+#esque {
+    margin-top: 14px;
+}
+
 .login a {
     text-decoration: none;
-    color: #4fb677;
+    color: #5f4b88;
     font-weight: 700;
+    transition: 0.2s;
 }
 
 .login a:hover {
@@ -145,13 +162,13 @@ main#mainAdm{
 
 /* ---------------acervo-------------- */
 body#body-acervo {
-    background-color: #759BE0;
+    background-color: #0f0f0f;
 }
 
 header {
     height: 70px;
     width: auto;
-    background-color: #7961AA;
+    background-color: #181818;
 
     display: flex;
     justify-content: center;
@@ -175,7 +192,7 @@ header img {
 nav {
     height: 40px;
     width: auto;
-    background-color: #4fb677;
+    background-color: #2b2b2b;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -186,17 +203,17 @@ nav {
     height: 20px;
     margin-left: 5px;
     border: none;
+    color: #181818;
     outline: none;
     padding: 3px;
     padding-left: 5px;
     border-radius: 2px;
-    background-color: #2f6e47;
-    color: rgb(228, 228, 228);
+    background-color: #e4e4e4;
     transition: 0.2s;
 }
 
 #pesquisa:focus{
-    background-color: #3b8b5a;
+    background-color: #7961AA;
 }
 
 #btnpesquisa {
@@ -208,7 +225,7 @@ nav {
     border: none;
     text-transform: uppercase;
     cursor: pointer;
-    background-color: #F0BF5B;
+    background-color: #7961AA;
     transition: 0.2s;
     margin-right: 10px;
 }
@@ -218,7 +235,8 @@ nav {
 }
 
 #filtros {
-    height: 20px;
+    height: 24px;
+    border-radius: 2px;
     border: none;
     outline: none;
     transition: 0.5s;
@@ -232,7 +250,7 @@ main#mainAcervo{
 .book-box {
     display: flex;
     flex-flow: column wrap;
-    background-color: #F1655D;
+    background-color: #886ebd;
     width: 40vw;
     justify-content: center;
     align-items: center;
