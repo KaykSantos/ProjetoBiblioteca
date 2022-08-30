@@ -37,7 +37,7 @@ body#body-login {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.342);
 }
 
-.form {
+.login form {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -58,24 +58,19 @@ body#body-login {
     transition: 0.2s;
 }
 
-.inputmain::placeholder {
-    transition: 0.2s;
-}
-
 .inputmain:focus {
     background-color: #5f4b88;
     color: rgb(219, 219, 219);
 }
 
 input::placeholder {
-    color: rgb(41, 41, 41);
+    color: rgb(126, 126, 126);
 }
 
-#entrar{
+form [type="submit"]{
     display: block;
     margin-top: 20px;
     height: 40px;
-    width: 295px;
     border-radius: 5px;
     color: rgb(202, 202, 202);
     border: none;
@@ -87,11 +82,11 @@ input::placeholder {
     transition: 0.2s;
 }
 
-#entrar:hover {
+form [type="submit"]:hover {
     background-color: #58ca84;
 }
 
-#entrar:active {
+form [type="submit"]:active {
     background-color: #a4ffc7;
 }
 
@@ -129,46 +124,16 @@ input::placeholder {
     color: #F0BF5B;
 }
 
-/* --------------home ADM------------- */
-body#bodyAdm{
-    background-color: #759BE0;
-}
-main#mainAdm{
-    display: flex;
-    flex-direction: column;
-    
-}
-.card{
-    width: 100px;
-    text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
-    display: block;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.2s;
-    padding: 10px;
-}
-.card:hover{
-    background-color: #80c49a;
-}
-.card a{
-    text-decoration: none;
-    padding: 10px;
-}
-
 
 /* ---------------acervo-------------- */
 body#body-acervo {
-    background-color: #0f0f0f;
+    background-color: #759BE0;
 }
 
 header {
     height: 70px;
     width: auto;
-    background-color: #181818;
+    background-color: #7961AA;
 
     display: flex;
     justify-content: center;
@@ -192,7 +157,7 @@ header img {
 nav {
     height: 40px;
     width: auto;
-    background-color: #2b2b2b;
+    background-color: #4fb677;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -203,17 +168,17 @@ nav {
     height: 20px;
     margin-left: 5px;
     border: none;
-    color: #181818;
     outline: none;
     padding: 3px;
     padding-left: 5px;
     border-radius: 2px;
-    background-color: #e4e4e4;
+    background-color: #2f6e47;
+    color: rgb(228, 228, 228);
     transition: 0.2s;
 }
 
 #pesquisa:focus{
-    background-color: #7961AA;
+    background-color: #3b8b5a;
 }
 
 #btnpesquisa {
@@ -225,7 +190,7 @@ nav {
     border: none;
     text-transform: uppercase;
     cursor: pointer;
-    background-color: #7961AA;
+    background-color: #F0BF5B;
     transition: 0.2s;
     margin-right: 10px;
 }
@@ -235,8 +200,7 @@ nav {
 }
 
 #filtros {
-    height: 24px;
-    border-radius: 2px;
+    height: 20px;
     border: none;
     outline: none;
     transition: 0.5s;
@@ -250,8 +214,8 @@ main#mainAcervo{
 .book-box {
     display: flex;
     flex-flow: column wrap;
-    background-color: #886ebd;
-    width: 40vw;
+    background-color: #F1655D;
+    width: 20vw;
     justify-content: center;
     align-items: center;
     padding: 10px;

@@ -1,35 +1,23 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
-  <script src="components/loader.js"></script>
-  <link rel="stylesheet" href="components/loader.css">
-  <link rel="stylesheet" href="css/style.css">
-  <!-- links -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Square+Peg&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="body-login">
     <main id="mainLogin">
         <section class="area-login">
             <div class="login"> <!-- Principal -->
-            <div class="logo">
-            <img src="logo/logoazul.png" alt="Logo do projeto">
-            </div>
-            
-                Usuário:
-                <input class="inputmain" type= "email" id="login" name="login" placeholder="Login">
-                <BR>
-                Senha:
-                <input class="inputmain" type="password" id="senha" name="senha" placeholder="Senha">
-                <br>
+                <div class="logo">
+                    <img src="logo/logoazul.png" alt="Logo do projeto">
+                </div>
+                <input class="inputmain form" type= "email" id="login" name="login" placeholder="Login" autocomplete="off">
+                <input class="inputmain form" type="password" id="senha" name="senha" placeholder="Senha">
                 <button id="entrar"> Entrar</button>
-        
-            <p><a href="#">Esqueceu a senha?</a></p>
+                <p><a id="esque" href="#">Esqueceu a senha?</a></p>
             </div>
         </section>
     </main>
@@ -53,7 +41,7 @@
             .then(data => {
                 console.log(data);
               if(data.erro){
-                    alert("Usuário e/ou senha inválidos!");
+                    alert("UsuÃ¡rio e/ou senha invÃ¡lidos");
                 }else{
                   alert(data.dados.nome);
                   location.href = "acervo.html";
