@@ -26,7 +26,29 @@
         </select>
     </nav>
     <main id="mainAcervo">
+        <div id="perfil"></div>
+        <span id="xxx" style="color: white;">Sair</span>
+
         <script src="components/script.js"></script>
     </main>
+    <script>
+        let usuario = JSON.parse(localStorage.usuario);
+        let perfil = document.getElementById('perfil');
+       
+        let dados = "<h3>"+usuario.nome+"</h3>";
+        dados += "<img src = '"+usuario.perfil+"'height='100px'>"
+        perfil.innerHTML = dados;
+        
+        /*function sair(){
+            localStorage.removeItem('usuario');
+            window.location.replace('index.html');
+        }*/
+        let sair = document.getElementById('perfil');
+        sair.addEventListener('click',function(){
+            console.log('Saas');
+            // localStorage.removeItem('usuario');
+            // window.location.replace('index.html');
+        });
+    </script>
 </body>
 </html>

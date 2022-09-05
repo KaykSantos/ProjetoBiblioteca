@@ -31,7 +31,7 @@
         formData.append('login', `${login.value}`);
         formData.append('senha', `${senha.value}`);
 
-        fetch("http://bba.profrodolfo.com.br/usuario.php",
+        fetch("http://bba.profrodolfo.com.br/php/usuario.php",
             {
                 body: formData,
                 method: "post",
@@ -41,14 +41,23 @@
             .then(data => {
                 console.log(data);
               if(data.erro){
-                    alert("UsuÃ¡rio e/ou senha invÃ¡lidos");
+                    alert("Usuário e/ou senha inválidos!");
                 }else{
-                  alert(data.dados.nome);
-                  location.href = "acervo.html";
+                    //alert(data.dados.nome);
+                    localStorage.setItem('usuario', JSON.stringify(data.dados));
+                    window.location.replace('acervo.html');
                 }
             })
           });
-      });   
+      });
+      Verifica();
+    function Verifica(){
+        let user = localStorage.usuario;
+        if(user){
+            
+            window.location.replace('acervo.html');
+        }
+    }
   </script>
   </body>
 </html>
