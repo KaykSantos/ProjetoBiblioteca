@@ -18,6 +18,8 @@
                 <input class="inputmain form" type="password" id="senha" name="senha" placeholder="Senha">
                 <button id="entrar"> Entrar</button>
                 <p><a id="esque" href="#">Esqueceu a senha?</a></p>
+                <div id="usuario-bloqueado"></div>
+                <div id="senha-invalida"></div>
             </div>
         </section>
     </main>
@@ -41,20 +43,32 @@
             .then(data => {
                 console.log(data);
               if(data.erro){
-                    alert("Usuário e/ou senha inválidos!");
+                    let senhaInvalida = document.getElementById('senha-invalida');
+                    let inv = "<h3>Usuário e/ou senha inválidos</h3>";
+                    senhaInvalida.innerHTML = inv;
                 }else{
-                    //alert(data.dados.nome);
-                    localStorage.setItem('usuario', JSON.stringify(data.dados));
-                    window.location.replace('acervo.html');
+                    // alert(data.dados.nome);
+                    // localStorage.setItem('usuario', JSON.stringify(data.dados));
+                    // window.location.replace('acervo.html');
+                    //{"rm":"4028","nome":"muckz","email":"muckz@gmail.com","dt_nascimento":"2006-02-20","genero":"M","telefone":"13998765432","senha":"12345678","perfil":"","user_status":"bloqueado","obs":null,"
+                    let statusUser = data.dados.user_status;
+
+                    if(statusUser == "bloqueado"){
+                        let user_bloq = document.getElementById('usuario-bloqueado');
+                        let bloq = "<h3>Usuário bloqueado. <br>Vá a biblioteca.</h3>";
+                        user_bloq.innerHTML = bloq;
+                    }else{
+                        localStorage.setItem('usuario', JSON.stringify(data.dados));
+                        window.location.replace('acervo.html');
+                    }
                 }
             })
           });
       });
-      Verifica();
+    Verifica();
     function Verifica(){
         let user = localStorage.usuario;
         if(user){
-            
             window.location.replace('acervo.html');
         }
     }

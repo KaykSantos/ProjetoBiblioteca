@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -25,86 +24,9 @@
             <option value="genero">Gênero</option>
             <option value="classind">Classificação Indicativa</option>
         </select>
+        <p><a href="conta.html">Conta</a></p>
     </nav>
     <main id="mainAcervo">
-        <div id="perfil"></div>
-        <span id="xxx" style="color: white;">Sair</span>
-
         <script src="components/script.js"></script>
     </main>
-    <script>
-        let usuario = JSON.parse(localStorage.usuario);
-        let perfil = document.getElementById('perfil');
-       
-        let dados = "<h3>"+usuario.nome+"</h3>";
-        dados += "<img src = '"+usuario.perfil+"'height='100px'>"
-        perfil.innerHTML = dados;
-        
-        /*function sair(){
-            localStorage.removeItem('usuario');
-            window.location.replace('index.html');
-        }*/
-        let sair = document.getElementById('perfil');
-        sair.addEventListener('click',function(){
-            console.log('Saas');
-            // localStorage.removeItem('usuario');
-            // window.location.replace('index.html');
-        });
-    </script>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acervo</title>
-    <link rel="stylesheet" href="css/style.css">
-    
-</head>
-<body id="body-acervo">
-    <header>
-        <div><img src="logo/logoazul.png" alt="logo" height="50px"></div>
-        <p>Acervo</p>
-    </header>
-    <nav>
-        <input type="text" name="pesquisa" id="pesquisa" placeholder="Barra de pesquisa">
-        <button id="btnpesquisa" value="pesquisar"><img src="img/lupa.png" alt="lupa" height="20px"></button>
-        <label for="filtros" style="color: rgb(247, 247, 247);;">Filtros</label>
-        <select name="filtros" id="filtros">
-            <option value="none"></option>
-            <option value="Nome">Nome</option>
-            <option value="autor">Autor</option>
-            <option value="genero">Gênero</option>
-            <option value="classind">Classificação Indicativa</option>
-        </select>
-    </nav>
-    <main id="mainAcervo">
-        <div id="perfil"></div>
-        <span id="xxx" style="color: white;">Sair</span>
-
-        <script src="components/script.js"></script>
-    </main>
-    <script>
-        let usuario = JSON.parse(localStorage.usuario);
-        let perfil = document.getElementById('perfil');
-       
-        let dados = "<h3>"+usuario.nome+"</h3>";
-        dados += "<img src = '"+usuario.perfil+"'height='100px'>"
-        perfil.innerHTML = dados;
-        
-        /*function sair(){
-            localStorage.removeItem('usuario');
-            window.location.replace('index.html');
-        }*/
-        let sair = document.getElementById('perfil');
-        sair.addEventListener('click',function(){
-            console.log('Saas');
-            // localStorage.removeItem('usuario');
-            // window.location.replace('index.html');
-        });
-    </script>
-</body>
->>>>>>> db35cb53f507b4df1c1f8993a38269d8de196baa
-</html>
