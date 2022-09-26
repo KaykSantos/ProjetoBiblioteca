@@ -18,12 +18,11 @@
         <p>Conta</p>
     </header>
     <nav>
-        <p><a href="acervo.html">Voltar</a></p>
+        <p ><a class="btnvoltar" href="acervo.html">Voltar</a></p>
     </nav>
-    <main id="mainConta">
+    <main id="mainConta"> 
         <div id="perfil"></div>
-        <br><br>
-        <div id="sair" onclick="sair()" style="color: white;">Sair</div>
+        <div id="sair" onclick="sair()" class="btnsair">Sair</div>
         <script src="components/script.js"></script>
     </main>
     <script>
@@ -67,13 +66,13 @@
             telefone = "Não cadastrado"
         }
 
-        let dados = "<h3 class='white'>Foto de perfil:</h3><img src = 'http://bba.profrodolfo.com.br/pages/usuario/fotos/"+usuario.rm+"/"+usuario.perfil+"'height='100px'>"
-        dados += "<h3 class='white'>Nome: "+nome+"</h3>";
-        dados += "<h3 class='white'>RM: "+usuario.rm+"</h3>";
-        dados += "<h3 class='white'>Email: "+email+"</h3>";
-        dados += "<h3 class='white'>Data de nascimento: "+dt_nascimento+"</h3>";
-        dados += "<h3 class='white'>Gênero: "+genero+"</h3>";
-        dados += "<h3 class='white'>Telefone: "+telefone+"</h3>";
+        let dados = "<div class='mostrarconta'><h3 class='white'>Foto de perfil:</h3><img style='border-radius: 50px;' src = 'http://bba.profrodolfo.com.br/imgs/usuario/fotos/"+usuario.rm+"/"+usuario.perfil+"'height='100px'>"
+        dados += "<div class='fundoconta'><h3 class='white'><span class='spanconta'>Nome:</span> "+nome+"</h3>";
+        dados += "<h3 class='white'><span class='spanconta'>RM:</span> "+usuario.rm+"</h3>";
+        dados += "<h3 class='white'><span class='spanconta'>Email:</span> "+email+"</h3>";
+        dados += "<h3 class='white'><span class='spanconta'>Data de nascimento:</span> "+dt_nascimento+"</h3>";
+        dados += "<h3 class='white'><span class='spanconta'>Gênero:</span> "+genero+"</h3>";
+        dados += "<h3 class='white'><span class='spanconta'>Telefone:</span> "+telefone+"</h3>";
         perfil.innerHTML = dados;
         
         function sair(){
