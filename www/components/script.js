@@ -1,5 +1,5 @@
 window.onload = function(){
-    let url = 'http://bba.profrodolfo.com.br/php/livro.php';
+    let url = 'http://bba.profrodolfo.com.br/livro.php';
     fetch(url)
     .then(resposta => {
         return resposta.json();
@@ -11,7 +11,7 @@ window.onload = function(){
         for(let i = 0; i < json.length; i++){
             texto += '<section class="book-box">';
             texto += '<div class="img-livro">';
-            texto += '<img src="http://bba.profrodolfo.com.br/pages/imgs_capa/'+json[i].cd+'/'+json[i].capa+'" alt="Capa do livro" height="80px">';
+            texto += '<img src="http://bba.profrodolfo.com.br/imgs/imgs_capa/'+json[i].cd+'/'+json[i].capa+'" alt="Capa do livro" height="80px">';
             texto += '</div>';
             texto += '<h3>Título: '+json[i].titulo+' </h3>';
             texto += '<h4>Autor: '+json[i].Autor+'</h4>';
@@ -24,4 +24,3 @@ window.onload = function(){
     })
 .catch();   
 }
-
