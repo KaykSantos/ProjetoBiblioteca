@@ -173,7 +173,7 @@ header {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 header p {
@@ -189,6 +189,21 @@ header img {
     margin: 10px;
 }
 
+#contaicon {
+    font-size: 1em;
+    color: #e4e4e4;
+    background-color: #5f4b88;
+    height: 100%;
+    width: 70px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+#contaicon:hover {
+    background-color: #9979da;
+}
+
 nav {
     height: 40px;
     width: auto;
@@ -198,6 +213,15 @@ nav {
     justify-content: center;
     gap: 5px;
 }
+
+nav.navacervo {
+    height: auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+
 
 #pesquisa {
     height: 20px;
