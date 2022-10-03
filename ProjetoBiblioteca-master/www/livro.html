@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .white{
+            color: white;
+        }
+    </style>
+</head>
+<body id="body-acervo">
+    <header>
+        <div><img src="logo/logoazul.png" alt="logo" height="50px"></div>
+        <p>Livro</p>
+    </header>
+    <nav>
+        <p ><a class="btnvoltar" href="acervo.html">Voltar</a></p>
+    </nav>
+    <main id="mainLivro">
+        <script>
+            let url = 'http://bba.profrodolfo.com.br/livro.php';
+            fetch(url)
+            .then(resposta => {
+                return resposta.json();
+            })
+            .then(function(json){
+                let d = document.querySelector('#livros');
+                let texto = '';
+                for(let i = 0; i < json.length; i++){
+                    if(json[i].cd == codigoLivro.cd){
+                        texto += '<section class="book-box">';
+                        texto += '<div class="img-livro">';
+                        texto += '<img src="http://bba.profrodolfo.com.br/imgs/imgs_capa/'+json[i].cd+'/'+json[i].capa+'" alt="Capa do livro" height="80px">';
+                        texto += '</div>';
+                        texto += '<h3>Título: '+json[i].titulo+' </h3>';
+                        texto += '<h4>Autor: '+json[i].Autor+'</h4>';
+                        texto += '<h4>Editora: '+json[i].Editora+'</h4>';
+                        //texto += '<button value="'+json[i].cd+'" class="btnpadrao" onclick="verLivro(this.value)">Ver Livro</button>';
+                        texto += '</section>';
+                        alert(cod);
+                    }
+                }
+                d.innerHTML += texto;
+            })
+        .catch();   
+        </script>
+        <div id="livros"></div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .white{
+            color: white;
+        }
+    </style>
+</head>
+<body id="body-acervo">
+    <header>
+        <div><img src="logo/logoazul.png" alt="logo" height="50px"></div>
+        <p>Conta</p>
+    </header>
+    <nav>
+        <p ><a class="btnvoltar" href="acervo.html">Voltar</a></p>
+    </nav>
+    <main id="mainConta"> 
+        <div id="perfil"></div>
+        <div id="sair" onclick="sair()" class="btnsair">Sair</div>
+        <script src="components/script.js"></script>
+    </main>
+    <script>
+        let usuario = JSON.parse(localStorage.usuario);
+        let perfil = document.getElementById('perfil');
+
+        let genero;
+        if(usuario.genero == "M"){
+            genero = "Masculino";
+        }else if(usuario.genero == "F"){
+            genero = "Feminino";
+        }else{
+            genero = "Não especificado";
+        }
+
+        let nome; 
+        if(usuario.nome != null){
+            nome = usuario.nome;
+        }else{
+            nome = "Não cadastrado"
+        }
+
+        let email; 
+        if(usuario.email != null){
+            email = usuario.email;
+        }else{
+            email = "Não cadastrado"
+        }
+
+        let dt_nascimento;
+        if(usuario.dt_nascimento != null){
+            dt_nascimento = usuario.dt_nascimento;
+        }else{
+            dt_nascimento = "Não cadastrado"
+        }
+
+        let telefone;
+        if(usuario.telefone != null){
+            telefone = usuario.telefone;
+        }else{
+            telefone = "Não cadastrado"
+        }
+
+        let dados = "<div class='mostrarconta'><h3 class='white'>Foto de perfil:</h3><img style='border-radius: 50px;' src = 'http://bba.profrodolfo.com.br/imgs/usuario/fotos/"+usuario.rm+"/"+usuario.perfil+"'height='100px'>"
+        dados += "<div class='fundoconta'><h3 class='white'><span class='spanconta'>Nome:</span> "+nome+"</h3>";
+        dados += "<h3 class='white'><span class='spanconta'>RM:</span> "+usuario.rm+"</h3>";
+        dados += "<h3 class='white'><span class='spanconta'>Email:</span> "+email+"</h3>";
+        dados += "<h3 class='white'><span class='spanconta'>Data de nascimento:</span> "+dt_nascimento+"</h3>";
+        dados += "<h3 class='white'><span class='spanconta'>Gênero:</span> "+genero+"</h3>";
+        dados += "<h3 class='white'><span class='spanconta'>Telefone:</span> "+telefone+"</h3>";
+        perfil.innerHTML = dados;
+        
+        function sair(){
+            localStorage.removeItem('usuario');
+            window.location.replace('index.html');
+        }
+    </script>
+</body>
+</html>
+<!-- 
+let dados = "<h3 class='white'>"+usuario.nome+"</h3>";
+dados += "<h3 class='white'>Foto de perfil:</h3><img src = 'http://bba.profrodolfo.com.br/pages/usuario/fotos/"+usuario.rm+"/"+usuario.perfil+"'height='100px'>"
+dados += "<h3 class='white'>RM: "+usuario.rm+"</h3>";
+dados += "<h3 class='white'>Email: "+usuario.email+"</h3>";
+dados += "<h3 class='white'>Data de nascimento: "+usuario.dt_nascimento+"</h3>";
+dados += "<h3 class='white'>Gênero: "+genero+"</h3>";
+dados += "<h3 class='white'>Telefone: "+usuario.telefone+"</h3>"; -->
