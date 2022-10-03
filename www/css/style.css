@@ -159,7 +159,60 @@ main#mainAdm{
     padding: 10px;
 }
 
+/* ---------------conta-------------- */
+.btnvoltar {
+    text-decoration: none;
+    background-color: #5f4b88;
+    color: rgb(202, 202, 202);
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    padding: 8px;
+    transition: 0.2s;
+}
+.btnvoltar:hover {
+    background-color: #7e62b4;
+}
+.btnvoltar:active {
+    background-color: #b28bff;
+}
 
+.btnsair {
+    display: flex;
+    background-color: rgb(207, 49, 49);
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    height: 30px;
+    width: 60px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.btnsair:hover {
+    background-color: rgb(238, 56, 56);
+}
+.btnvoltar:active {
+    background-color: rgb(255, 118, 118);
+}
+
+.mostrarconta {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.fundoconta {
+    background-color: #2b2b2b;
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 10px;
+}
+
+.spanconta {
+    color: #ad84ff;
+}
 /* ---------------acervo-------------- */
 body#body-acervo {
     background-color: #0f0f0f;
