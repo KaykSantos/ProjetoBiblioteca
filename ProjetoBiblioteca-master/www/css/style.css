@@ -199,7 +199,7 @@ main#mainAdm{
     background-color: rgb(255, 118, 118);
 }
 
-.btnpadrao {
+.btnsair{
     display: flex;
     background-color: rgb(207, 49, 49);
     color: white;

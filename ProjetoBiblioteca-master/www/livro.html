@@ -21,34 +21,42 @@
         <p ><a class="btnvoltar" href="acervo.html">Voltar</a></p>
     </nav>
     <main id="mainLivro">
-        <script>
-            let url = 'http://bba.profrodolfo.com.br/livro.php';
-            fetch(url)
-            .then(resposta => {
-                return resposta.json();
-            })
-            .then(function(json){
-                let d = document.querySelector('#livros');
-                let texto = '';
-                for(let i = 0; i < json.length; i++){
-                    if(json[i].cd == codigoLivro.cd){
-                        texto += '<section class="book-box">';
-                        texto += '<div class="img-livro">';
-                        texto += '<img src="http://bba.profrodolfo.com.br/imgs/imgs_capa/'+json[i].cd+'/'+json[i].capa+'" alt="Capa do livro" height="80px">';
-                        texto += '</div>';
-                        texto += '<h3>Título: '+json[i].titulo+' </h3>';
-                        texto += '<h4>Autor: '+json[i].Autor+'</h4>';
-                        texto += '<h4>Editora: '+json[i].Editora+'</h4>';
-                        //texto += '<button value="'+json[i].cd+'" class="btnpadrao" onclick="verLivro(this.value)">Ver Livro</button>';
-                        texto += '</section>';
-                        alert(cod);
-                    }
-                }
-                d.innerHTML += texto;
-            })
-        .catch();   
-        </script>
         <div id="livros"></div>
+        <script>
+            window.onload = function(){
+                let url = 'http://bba.profrodolfo.com.br/livro.php';
+                fetch(url)
+                .then(resposta => {
+                    return resposta.json();
+                })
+                .then(function(json){
+                    let d = document.querySelector('#livros');
+                    let texto = '';
+                    let cod = localStorage.codigoLivro.cd;
+                    console.log(cod);
+                    alert("Salve Rodos, blz? Não consegui descobrir o por que da let 'cod' esta como undefined");
+                    alert("Lembra que ficamos um bom tempo tentando pegar o valor específico de um input?");
+                    alert("Descobri como, utilizando a função 'verLivro()'");
+                    // for(let i = 0; i < json.length; i++){
+                    //     if(cod == json[i].cd){
+                    //         // texto += '<section class="book-box">';
+                    //         // texto += '<div class="img-livro">';
+                    //         // texto += '<img src="http://bba.profrodolfo.com.br/imgs/imgs_capa/'+json[i].cd+'/'+json[i].capa+'" alt="Capa do livro" height="80px">';
+                    //         // texto += '</div>';
+                    //         // texto += '<h3>Título: '+json[i].titulo+' </h3>';
+                    //         // texto += '<h4>Autor: '+json[i].Autor+'</h4>';
+                    //         // texto += '<h4>Editora: '+json[i].Editora+'</h4>';
+                    //         // texto += '<button value="'+json[i].cd+'" class="btnpadrao" onclick="verLivro(this.value)">Ver Livro</button>';
+                    //         // //texto += '<input class="verLivro" hidden type="text" value="'+json[i].cd+'">';
+                    //         // //texto += '<div onclick="verLivro()">Ver livro</div>';
+                    //         // texto += '</section>';
+                    //     }
+                    // }
+                    // d.innerHTML += texto;
+                })
+            .catch();   
+            }
+        </script>
     </main>
 </body>
 </html>
